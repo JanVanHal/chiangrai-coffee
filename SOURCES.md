@@ -64,3 +64,18 @@ Note: the HRDI range describes the subdistrict's terrain in general, not specifi
 | Oliang 25–40 THB per glass from street carts | Caffeine Spots, "Thai Iced Coffee (Oliang)": https://caffeinespots.com/cafes/thai-iced-coffee-oliang-what-it-is-and-how-its-made/ |
 
 The sample prices (35–75 THB) sit between cheap independent Chiang Rai cafés and the national chains. The review figures are crowd-sourced and some are years old, so treat the prices as a starting point.
+
+## Images
+
+Images are illustrative (AI-generated) and do not depict specific farms or people.
+
+All images in `images/` were generated with an AI image-generation tool for this site and converted to WebP. None is a photograph of a real place, farm, business or person.
+
+| File | Subject | Used in | Origin |
+|---|---|---|---|
+| `images/hero-hills.webp` | Misty forested hills at golden hour (generic, not a specific landmark) | Hero | AI-generated |
+| `images/plantation.webp` | Shade-grown arabica on a hillside with red cherries | Origin | AI-generated |
+| `images/farmworkers.webp` | Farmworkers picking coffee cherries (no identifiable faces) | Origin | AI-generated |
+| `images/espresso.webp` | Espresso pouring from a portafilter | Menu | AI-generated |
+| `images/hot-cup.webp` | Steaming cup of coffee on linen | Menu | AI-generated |
+| `images/cafe.webp` | Café counter interior | About | AI-generated |

@@ -136,9 +136,21 @@
   dl.hours dd{margin:0}
   .map-ph{border:1px dashed var(--color-roast-ink);border-radius:var(--radius-md);min-height:240px;display:flex;align-items:center;justify-content:center;color:var(--color-slate-border);font-size:var(--text-caption);letter-spacing:var(--tracking-caption);text-align:center;padding:var(--card-padding);background:var(--color-linen-surface)}
 
+  /* IMAGES — photography sits on the canvas, 4px corners, no frame, no shadow */
+  .photo{margin:0}
+  .photo img{width:100%;height:auto;object-fit:cover;background:var(--color-linen-surface)}
+  .hero-photo{margin-top:var(--spacing-58)}
+  .hero-photo img{aspect-ratio:4/3}
+  .photo-pair{display:grid;gap:var(--element-gap);grid-template-columns:1fr;margin:var(--spacing-43) 0 0}
+  .photo-pair img{aspect-ratio:3/2}
+  .photo-pair.tall img{aspect-ratio:4/5}
+  .about-photo{margin-top:var(--spacing-29)}
+  .about-photo img{aspect-ratio:4/3}
+
   footer{border-top:1px solid var(--color-slate-border);margin-top:var(--spacing-58);padding:var(--spacing-29) 0 var(--spacing-43);font-size:var(--text-caption);line-height:var(--leading-caption);letter-spacing:var(--tracking-caption);color:var(--color-slate-border)}
   footer .wrap{display:flex;flex-direction:column;gap:var(--element-gap)}
   footer .annot{font-size:22px;color:var(--color-roast-ink)}
+  footer .img-note{flex-basis:100%}
 
   /* Contrast: Slate (#666e72) is only ~4.3:1 on Linen/Manilla, so muted text on those surfaces uses Roast Ink */
   .card .meta,.src,.src a,dl.hours dt,.map-ph{color:var(--color-roast-ink)}
@@ -161,8 +173,11 @@
     .grid{grid-template-columns:repeat(2,1fr);gap:var(--spacing-29)}
     .two{grid-template-columns:1fr 1fr;gap:var(--spacing-68)}
     .menu-list{display:grid;grid-template-columns:1fr 1fr;column-gap:var(--spacing-68);border-top:0}
+    .hero-photo img{aspect-ratio:16/9}
+    .photo-pair{grid-template-columns:1fr 1fr;gap:var(--spacing-29)}
+    .photo-pair.tall img{aspect-ratio:1/1}
     .menu-item:nth-child(-n+2){border-top:1px solid var(--color-slate-border)}
-    footer .wrap{flex-direction:row;justify-content:space-between;align-items:baseline}
+    footer .wrap{flex-direction:row;flex-wrap:wrap;justify-content:space-between;align-items:baseline}
   }
   @media (min-width:1100px){
     body{font-size:var(--text-body)}
@@ -199,6 +214,9 @@
       <a class="btn btn-primary" href="#menu">See the menu</a>
       <a class="btn btn-ghost" href="#origin">Where our coffee grows</a>
     </div>
+    <figure class="photo hero-photo">
+      <img src="images/hero-hills.webp" width="1280" height="720" loading="eager" fetchpriority="high" decoding="async" alt="Forested hills of northern Thailand layered in morning mist at golden hour">
+    </figure>
     <div class="hero-facts">
       <div><strong>Arabica</strong><span>grown in Chiang Rai's highlands</span></div>
       <div><strong>800 &ndash; 1,700 m</strong><span>growing altitudes of Doi Tung and Doi Chaang</span></div>
@@ -213,6 +231,11 @@
     <span class="eyebrow">Origin</span>
     <h2>Grown in the mountains of Chiang Rai</h2>
     <p class="lead">Coffee came to these hills as a replacement crop for opium. Today Chiang Rai is known for highland arabica, much of it grown by Akha, Lahu, Lisu and other hill communities.</p>
+
+    <div class="photo-pair">
+      <figure class="photo"><img src="images/plantation.webp" width="1080" height="720" loading="lazy" decoding="async" alt="Shade-grown arabica coffee shrubs with ripe red cherries on a hillside under tall trees"></figure>
+      <figure class="photo"><img src="images/farmworkers.webp" width="1080" height="720" loading="lazy" decoding="async" alt="Farmworkers in wide-brimmed hats picking ripe coffee cherries by hand, seen from behind among the coffee shrubs"></figure>
+    </div>
 
     <div class="grid" style="margin-top:58px">
       <article class="card">
@@ -269,6 +292,10 @@
     <span class="eyebrow">Menu</span>
     <h2>Coffee</h2>
     <p class="lead">Ten of the drinks people order most in Thai cafés, from the classic Italian menu to Thai favourites.</p>
+    <div class="photo-pair">
+      <figure class="photo"><img src="images/espresso.webp" width="1080" height="720" loading="lazy" decoding="async" alt="Espresso pouring from a portafilter into a small cup on a café espresso machine"></figure>
+      <figure class="photo"><img src="images/hot-cup.webp" width="1080" height="720" loading="lazy" decoding="async" alt="A steaming cup of hot coffee on a warm linen cloth in soft daylight"></figure>
+    </div>
     <p class="legend">Prices in Thai baht (THB), hot / iced.</p>
     <ul class="menu-list" id="menu-list"></ul>
     <p class="note"><span class="tag">Sample</span>These are sample prices based on typical Chiang Rai and Thai café prices. Adjust them before publishing. Ask for <span class="thai">หวานน้อย</span> (waan noi, less sweet) or <span class="thai">ไม่หวาน</span> (mai waan, not sweet).</p>
@@ -280,6 +307,7 @@
     <div>
       <span class="eyebrow">About</span>
       <h2>About <span data-shop-name>[Your Café Name]</span></h2>
+      <figure class="photo about-photo"><img src="images/cafe.webp" width="960" height="720" loading="lazy" decoding="async" alt="A quiet café counter with wooden surfaces and coffee equipment in natural window light"></figure>
     </div>
     <div class="placeholder">
       <p><span class="tag">Placeholder</span></p>
@@ -315,6 +343,7 @@
   <div class="wrap">
     <span>&copy; <span id="year"></span> <span data-shop-name>[Your Café Name]</span> &middot; Chiang Rai, Thailand</span>
     <span class="annot">Coffee from the hills of northern Thailand</span>
+    <span class="img-note">Images are illustrative (AI-generated) and do not depict specific farms or people.</span>
   </div>
 </footer>
 
